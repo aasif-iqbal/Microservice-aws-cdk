@@ -25,7 +25,7 @@ export class ApiGatewayStack extends Construct {
     GET product/{id}
     PUT product/{id}
     DELETE product/{id}
-     */
+    */
 
     const productResource = apgw.root.addResource("product");
     productResource.addMethod("GET");

@@ -19,19 +19,26 @@ cdk --version
 ```
 
 3. Now, we need to setup IAM-USER in aws-account.
-  a. Login to aws-account. (iam-user)
+  a. Login to aws-account. (iam-user).
+
   b. Create-group > Access Management > User groups
+    
     Name: cdk-dev-local
+    
     click-btn: create group
 
   c. Create-user > Access Management > Users > Add User
+    
     user name: cdk-aasif-local
+    
     clicl-btn: next
 
   d. Set Permission
+    
     (*)Add user group
 
     User group 
+    
     Group name > cdk-aasif-local > next > create user
 
   e. IAM > User group
@@ -42,18 +49,27 @@ cdk --version
     Add Permission > attach polices
 
     type `admin` in search box 
+
     [checked] Administrator access  > Add Permission
+
     Policy name - Administrator access
 
   f. IAM > Users > cdk-aasif-local
+    
     click - cdk-aasif-local
+
     Permission| Group|tags|security credential (click)
+
     Access key -> create access key -> Command line interface(CLI)
+
     set description tag: cdk-local-access 
+
     click-btn: create access key
 
     copy:
+    
     access-key: AKIA...............KKM
+    
     secret-access-key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 4. Open termincal at root dir.
@@ -66,15 +82,19 @@ Default output format(json):
 ```
 
 5. Open terminal at project dir.
+  
   a. create project folder - mkdir Product-services
+  
   b. cd Product-services
+  
   c. cdk init app --language=typescript
 
 6. Project Structure is created.
+  
   Product-services 
-    - bin
-    - lib/product-services-stack.ts (infra-structure as a code) 
-    - src/index.ts (Lambda handler function) [we need to create `src` folder manually]
+  - bin
+  - lib/product-services-stack.ts (infra-structure as a code) 
+  - src/index.ts (Lambda handler function) [we need to create `src` folder manually]
 
 7. After setup `lib/product-services-stack.ts` and write code in `src/index.ts`.
 
@@ -82,10 +102,14 @@ Default output format(json):
 ```
 Product-services> cdk-bootstrap
 ```
-Note: Make sure you have installed `docker-desktop` & it must be running on background during `cdk-bootstrap`
+
+Note: Make sure you have installed `docker-desktop` & it must be running on 
+
+background during `cdk-bootstrap`
 
 9. Goto AWS-CloudFormation (website)
-stacks  - CDKToolkit(stack-name)
+
+- stacks  - CDKToolkit(stack-name)
 
 10. Open terminal at Product-services.
 ```
@@ -98,8 +122,7 @@ Do you wish to deploy these changes(y/n)? Y
 ```
 ProductServiceStack = https://5m...UKXOex.............com/prod/
 ```
-
-----------------------------------------------------------------------------------
+---
 
 npm install --save-dev @types/aws-lambda
 
@@ -108,4 +131,14 @@ If after running docker-desktop. docker not start or docker --version not found-
 export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin
 
 docker --version
+```
+
+### To execute cdk-stack in local we need `AWS SAM CLI`.
+```
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html
+```
+
+Now our server is running on local machine
+```
+127.0.0.1:3000/product
 ```
