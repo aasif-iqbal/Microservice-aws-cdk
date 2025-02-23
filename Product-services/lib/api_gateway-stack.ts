@@ -20,12 +20,11 @@ export class ApiGatewayStack extends Construct {
     });
 
     /*
-     GET product
-     POST product
-     GET product/{id}
-     PUT product/{id}
-     DELETE product/{id}
-     
+    GET product
+    POST product
+    GET product/{id}
+    PUT product/{id}
+    DELETE product/{id}
      */
 
     const productResource = apgw.root.addResource("product");

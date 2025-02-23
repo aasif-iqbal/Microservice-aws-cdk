@@ -1,0 +1,928 @@
+{
+  "version": "39.0.0",
+  "artifacts": {
+    "ProductServiceStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ProductServiceStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ProductServiceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ProductServiceStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4bf1eb8e8bb4a494010ee74fb949086e7bdc0fb52fb4ed2241a8acec4398d701.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ProductServiceStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ProductServiceStack.assets"
+      ],
+      "metadata": {
+        "/ProductServiceStack/ProductService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "If you are relying on AWS SDK v2 to be present in the Lambda environment already, please explicitly configure a NodeJS runtime of Node 16 or lower. [ack: @aws-cdk/aws-lambda-nodejs:sdkV2NotInRuntime]",
+            "trace": [
+              "Annotations.addMessage (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new Bundling (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/bundling.js:1:3762)",
+              "Function.bundle (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/bundling.js:1:1066)",
+              "new NodejsFunction (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/function.js:1:2288)",
+              "new ServiceStack (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/lib/service-stack.ts:29:27)",
+              "new ProductServiceStack (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/lib/product-service-stack.ts:9:32)",
+              "Object.<anonymous> (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/bin/product_services.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1376:14)",
+              "Module.m._compile (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1435:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1207:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1023:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)",
+              "phase4 (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/Users/aasifiqbal/Development/Microservices-cdk/Product-services/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1376:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1435:10)",
+              "Module.load (node:internal/modules/cjs/loader:1207:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1023:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)",
+              "node:internal/main/run_main_module:28:49"
+            ]
+          }
+        ],
+        "/ProductServiceStack/ProductService/productLambda": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "entry": "*",
+              "bundling": {
+                "externalModules": "*"
+              },
+              "environment": "*",
+              "runtime": "*",
+              "code": "*",
+              "handler": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {}
+          },
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "entry": "*",
+              "bundling": {
+                "externalModules": "*"
+              },
+              "environment": "*",
+              "runtime": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductService/productLambda/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductService/productLambda/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/ProductServiceStack/ProductService/productLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductServiceproductLambdaServiceRole26A678A7"
+          }
+        ],
+        "/ProductServiceStack/ProductService/productLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductServiceproductLambda46558C21"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "defaultIntegration": "*",
+              "restApiName": "*",
+              "handler": "*",
+              "proxy": false
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "restApiName": "*",
+              "handler": "*",
+              "proxy": false
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtw1BCDF435"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Deployment": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "description": "*",
+              "api": "*",
+              "retainDeployments": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwDeployment61FE57C28755a5e5fa5b23b2333c00a2a99945f4"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/DeploymentStage.prod": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "deployment": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwDeploymentStageprod3E54DF11"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwEndpointA63131F9"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductBF6555B2"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..product": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETproductEE4A92ED"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..product": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETproduct00BFB00D"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductGET3E8DB805"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/POST": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/POST/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..product": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductPOSTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTproductF6CD0A03"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/POST/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..product": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductPOSTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTproduct26347027"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductPOST221381B6"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductid40EFF2C6"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETproductid75572B75"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETproductid0F6FA48B"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidGETD5BA7D21"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/PUT": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/PUT/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidPUTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTproductid484820F0"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/PUT/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidPUTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTproductid11729045"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidPUTF6D997CC"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/DELETE": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/DELETE/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidDELETEApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEproductid9FDDACCC"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/DELETE/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..product.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidDELETEApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEproductidF9B99213"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/product/{id}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwproductidDELETE887E6F41"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryDF8D2BE4"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..category": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETcategory804AA926"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..category": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETcategory3671E608"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryGETF554EA04"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/POST": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/POST/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..category": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryPOSTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTcategory3D15815C"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/POST/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..category": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryPOSTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTcategoryDD7B3EEF"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryPOST00196892"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryid1E03B4CF"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETcategoryid52F4F4D3"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETcategoryidEAD2C84B"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidGETA3BC780F"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/PUT": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/PUT/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidPUTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTcategoryidB56D8F8E"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/PUT/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidPUTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTcategoryidF9A186BE"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidPUTE5E6F60F"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/DELETE": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/DELETE/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidDELETEApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEcategoryid44386A79"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/DELETE/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..category.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidDELETEApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEcategoryid90F242A3"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/category/{id}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwcategoryidDELETE557D8C4B"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdeals154B6493"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..deals": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETdeals09E66F27"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..deals": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETdealsD274F8AB"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsGET364F694D"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/POST": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/POST/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..deals": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsPOSTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTdealsEC5B40A4"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/POST/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.POST..deals": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsPOSTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPOSTdeals0B91D139"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsPOST37C69109"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "pathPart": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsid0078D597"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/GET": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/GET/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidGETApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FGETdealsid30911CAF"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/GET/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.GET..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidGETApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FGETdealsid3BC9CF1F"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidGETA4D4C8FD"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/PUT": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/PUT/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidPUTApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTdealsid8E17F9B0"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/PUT/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.PUT..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidPUTApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FPUTdealsidC56DEFE3"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidPUT933B3E02"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/DELETE": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/DELETE/ApiPermission.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidDELETEApiPermissionProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEdealsid45F0261D"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/DELETE/ApiPermission.Test.ProductServiceStackProductApiGayewayproductApiGtw41AF286F.DELETE..deals.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidDELETEApiPermissionTestProductServiceStackProductApiGayewayproductApiGtw41AF286FDELETEdealsid4EEF065B"
+          }
+        ],
+        "/ProductServiceStack/ProductApiGayeway/product-ApiGtw/Default/deals/{id}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductApiGayewayproductApiGtwdealsidDELETE34C9C472"
+          }
+        ],
+        "/ProductServiceStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ProductServiceStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ProductServiceStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ProductServiceStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ProductServiceStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

@@ -102,3 +102,10 @@ ProductServiceStack = https://5m...UKXOex.............com/prod/
 ----------------------------------------------------------------------------------
 
 npm install --save-dev @types/aws-lambda
+
+If after running docker-desktop. docker not start or docker --version not found-
+```
+export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin
+
+docker --version
+```

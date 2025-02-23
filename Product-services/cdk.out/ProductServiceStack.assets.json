@@ -1,0 +1,32 @@
+{
+  "version": "39.0.0",
+  "files": {
+    "7e041206b2d5d023eb021faa144531559b86a067b0c0ef156add7b36414a9887": {
+      "source": {
+        "path": "/Users/aasifiqbal/Development/Microservices-cdk/Product-services",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "7e041206b2d5d023eb021faa144531559b86a067b0c0ef156add7b36414a9887.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "4bf1eb8e8bb4a494010ee74fb949086e7bdc0fb52fb4ed2241a8acec4398d701": {
+      "source": {
+        "path": "ProductServiceStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4bf1eb8e8bb4a494010ee74fb949086e7bdc0fb52fb4ed2241a8acec4398d701.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -23,7 +23,7 @@ export class ServiceStack extends Construct {
       environment: {
         BUCKET_NAME: "OUR_BUCKET_ARN",
       },
-      runtime: Runtime.NODEJS_16_X,
+      runtime: Runtime.NODEJS_20_X,
     };
 
     this.productService = new NodejsFunction(this, "productLambda", {
